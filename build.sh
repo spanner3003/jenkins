@@ -88,11 +88,6 @@ repo sync -d
 check_result repo sync failed.
 echo Sync complete.
 
-if [ -f $WORKSPACE/jenkins/$REPO_BRANCH-setup.sh ]
-then
-  $WORKSPACE/jenkins/$REPO_BRANCH-setup.sh
-fi
-
 . build/envsetup.sh
 lunch $LUNCH
 check_result lunch failed.

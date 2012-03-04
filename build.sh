@@ -84,7 +84,7 @@ then
 fi
 
 echo Syncing...
-repo sync -d
+repo sync -d --jobs=12
 check_result repo sync failed.
 echo Sync complete.
 

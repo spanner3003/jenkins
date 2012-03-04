@@ -8,4 +8,6 @@ fi
 cd jenkins
 git pull
 
+chmod -R a+x $WORKSPACE/jenkins
+
 exec ./build.sh

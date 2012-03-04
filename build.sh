@@ -84,7 +84,7 @@ then
 fi
 
 echo Syncing...
-repo sync -d > /dev/null 2> /dev/null
+repo sync -d
 check_result repo sync failed.
 echo Sync complete.
 

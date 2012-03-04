@@ -88,6 +88,9 @@ repo sync -d
 check_result repo sync failed.
 echo Sync complete.
 
+chmod -R a+x scripts/
+. scripts/aokp_upstream_git_fetch-merge.sh
+
 . build/envsetup.sh
 lunch $LUNCH
 check_result lunch failed.

@@ -91,6 +91,8 @@ echo Sync complete.
 chmod -R a+x scripts/
 . scripts/aokp_upstream_git_fetch-merge.sh
 
+cd $WORKSPACE/$REPO_BRANCH
+
 . build/envsetup.sh
 lunch $LUNCH
 check_result lunch failed.

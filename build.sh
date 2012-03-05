@@ -93,6 +93,8 @@ then
   $WORKSPACE/jenkins/$REPO_BRANCH-setup.sh
 fi
 
+ls
+
 . build/envsetup.sh
 lunch $LUNCH
 check_result lunch failed.

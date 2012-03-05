@@ -93,7 +93,7 @@ then
   $WORKSPACE/jenkins/$REPO_BRANCH-setup.sh
 fi
 
-ls
+echo $PWD
 
 . build/envsetup.sh
 lunch $LUNCH

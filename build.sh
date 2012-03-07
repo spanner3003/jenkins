@@ -90,7 +90,11 @@ echo Sync complete.
 
 if [ -f $WORKSPACE/jenkins/$REPO_BRANCH-setup.sh ]
 then
-  $WORKSPACE/jenkins/$REPO_BRANCH-setup.sh
+  if [ -f $WORKSPACE/vendor/cm/get-prebuilts ]
+  then
+    mv $WORKSPACE/jenkins/*-setup.sh $WORKSPACE/jenkins/$REPO_BRANCH-setup.sh
+      $WORKSPACE/jenkins/$REPO_BRANCH-setup.sh
+  fi
 fi
 
 echo $PWD

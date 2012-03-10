@@ -107,19 +107,11 @@ then
 fi
 
 make $CLEAN_TYPE
-mka bacon recoveryzip recoveryimage checkapi
+mka bacon checkapi
 check_result Build failed.
 
-cp $OUT/update*.zip* $WORKSPACE/archive
-if [ -f $OUT/utilties/update.zip ]
-then
-  cp $OUT/utilties/update.zip $WORKSPACE/archive/recovery.zip
-fi
-if [ -f $OUT/recovery.img ]
-then
-  cp $OUT/recovery.img $WORKSPACE/archive
-fi
+cp $OUT/aokp_galaxytab_milestone-4.zip* $WORKSPACE/archive
 
 # archive the build.prop as well
-ZIP=$(ls $WORKSPACE/archive/update*.zip)
+ZIP=$(ls $WORKSPACE/archive/aokp_galaxytab_milestone-4.zip)
 unzip -c $ZIP system/build.prop > $WORKSPACE/archive/build.prop
